@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barigui.Core", "Barigui.Cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barigui1.Service", "Barigui1.Service\Barigui1.Service.csproj", "{C1B89679-B7CA-47C0-AD85-3FF52DC4BB1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barigui2.Service", "Barigui2.Service\Barigui2.Service.csproj", "{CCA93B97-5CEC-4101-8944-1964287A5DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barigui2.Service", "Barigui2.Service\Barigui2.Service.csproj", "{CCA93B97-5CEC-4101-8944-1964287A5DB5}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8F39FC12-93B5-449B-9DD0-0DB7FC02B3CD}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CF467356-74D9-46E5-9864-401FFDE4894C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{CCA93B97-5CEC-4101-8944-1964287A5DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCA93B97-5CEC-4101-8944-1964287A5DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCA93B97-5CEC-4101-8944-1964287A5DB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F39FC12-93B5-449B-9DD0-0DB7FC02B3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F39FC12-93B5-449B-9DD0-0DB7FC02B3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F39FC12-93B5-449B-9DD0-0DB7FC02B3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F39FC12-93B5-449B-9DD0-0DB7FC02B3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF467356-74D9-46E5-9864-401FFDE4894C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF467356-74D9-46E5-9864-401FFDE4894C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF467356-74D9-46E5-9864-401FFDE4894C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF467356-74D9-46E5-9864-401FFDE4894C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

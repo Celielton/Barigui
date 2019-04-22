@@ -1,4 +1,4 @@
-﻿using Barigui.Core.Events.Interfaces;
+using Barigui.Core.Events.Interfaces;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;

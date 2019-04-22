@@ -1,34 +1,34 @@
 version: '3.4'
 
-
 services:
   rabbit:
-    image: rabbitmq:management
-    hostname: rabbit
-    ports:
-        - "15672:15672"
-    environment:
-        - RABBITMQ_ERLANG_COOKIE='mysecret'
-    networks:
-      - barigui
-  
+      image: rabbitmq:management
+      hostname: rabbit
+      ports:
+          - "15672:15672"
+      environment:
+          - RABBITMQ_ERLANG_COOKIE='mysecret'
+      networks:
+        - barigui
+      healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+
   barigui1.service:
     image: ${DOCKER_REGISTRY-}barigui1service
     build:
       context: .
-      dockerfile: Barigui1.Service\Dockerfile
-    networks:
-      - barigui
+      dockerfile: Barigui1.Service/Dockerfile
     depends_on:
       - rabbit
-
+      
   barigui2.service:
     image: ${DOCKER_REGISTRY-}barigui2service
     build:
       context: .
-      dockerfile: Barigui2.Service\Dockerfile
-    networks:
-      - barigui
+      dockerfile: Barigui2.Service/Dockerfile
     depends_on:
       - rabbit
 
