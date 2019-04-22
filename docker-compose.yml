@@ -17,7 +17,8 @@ services:
         retries: 5
 
   barigui1.service:
-    image: ${DOCKER_REGISTRY-}barigui1service
+    image: service1
+    hostname: service1
     build:
       context: .
       dockerfile: Barigui1.Service/Dockerfile
@@ -29,7 +30,8 @@ services:
     restart: on-failure
       
   barigui2.service:
-    image: ${DOCKER_REGISTRY-}barigui2service
+    image: service2
+    hostname: service2
     build:
       context: .
       dockerfile: Barigui2.Service/Dockerfile
@@ -37,7 +39,7 @@ services:
         - barigui
     depends_on:
       - rabbit
-    command: sh -c './wait-for localhost:15672'
+    command: sh -c './wait-for rabbit:15672'
     restart: on-failure
 
 networks:
