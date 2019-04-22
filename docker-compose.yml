@@ -1,0 +1,37 @@
+version: '3.4'
+
+
+services:
+  rabbit:
+    image: rabbitmq:management
+    hostname: rabbit
+    ports:
+        - "15672:15672"
+    environment:
+        - RABBITMQ_ERLANG_COOKIE='mysecret'
+    networks:
+      - barigui
+  
+  barigui1.service:
+    image: ${DOCKER_REGISTRY-}barigui1service
+    build:
+      context: .
+      dockerfile: Barigui1.Service\Dockerfile
+    networks:
+      - barigui
+    depends_on:
+      - rabbit
+
+  barigui2.service:
+    image: ${DOCKER_REGISTRY-}barigui2service
+    build:
+      context: .
+      dockerfile: Barigui2.Service\Dockerfile
+    networks:
+      - barigui
+    depends_on:
+      - rabbit
+
+networks:
+    barigui:
+      driver: bridge
