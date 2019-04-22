@@ -19,7 +19,7 @@ namespace Barigui.Core.Events.Consumer
             string exchange = topic;
 
             var factory = new ConnectionFactory() {
-                HostName = "localhost",
+                HostName = "rabbit",
                 UserName = "guest",
                 Password = "guest",
                 AutomaticRecoveryEnabled = true

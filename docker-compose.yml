@@ -21,16 +21,24 @@ services:
     build:
       context: .
       dockerfile: Barigui1.Service/Dockerfile
+    networks:
+        - barigui
     depends_on:
       - rabbit
+    command: sh -c './wait-for rabbit:5672'
+    restart: on-failure
       
   barigui2.service:
     image: ${DOCKER_REGISTRY-}barigui2service
     build:
       context: .
       dockerfile: Barigui2.Service/Dockerfile
+    networks:
+        - barigui
     depends_on:
       - rabbit
+    command: sh -c './wait-for localhost:15672'
+    restart: on-failure
 
 networks:
     barigui:

@@ -18,7 +18,7 @@ namespace Barigui.Core.Events.Bus
 
             using (var connection = new ConnectionFactory()
             {
-                HostName = "localhost",
+                HostName = "rabbit",
                 UserName = "guest",
                 Password = "guest"
             }.CreateConnection())
